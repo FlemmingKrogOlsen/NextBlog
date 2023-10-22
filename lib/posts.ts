@@ -4,6 +4,7 @@ import rehypeAutolinkHeadings from "rehype-autolink-headings/lib";
 import rehypeHighlight from "rehype-highlight/lib";
 import Video from "@/app/components/Video";
 import CustomImage from "@/app/components/CustomImage";
+import Gallery from "@/app/components/Gallery";
 
 type Filetree = {
   tree: [
@@ -35,13 +36,18 @@ export async function getPostByName(
 
   const { frontmatter, content } = await compileMDX<{
     title: string;
+    subtitle: string;
     date: string;
     tags: string[];
+    image: string;
+    price: string;
+    areal: string;
   }>({
     source: rawMDX,
     components: {
       Video,
       CustomImage,
+      Gallery,
     },
     options: {
       parseFrontmatter: true,
@@ -66,8 +72,12 @@ export async function getPostByName(
     meta: {
       id,
       title: frontmatter.title,
+      subtitle: frontmatter.subtitle,
       date: frontmatter.date,
       tags: frontmatter.tags,
+      price: frontmatter.price,
+      areal: frontmatter.areal,
+      image: frontmatter.image,
     },
     content,
   };

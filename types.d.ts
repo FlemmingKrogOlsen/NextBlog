@@ -1,8 +1,12 @@
 type Meta = {
     id: string;
     title: string;
+    subtitle: string;
     date: string;
     tags: string[];
+    image: string;
+    price: string;
+    areal: string;
 }
 
 type BlogPost = {

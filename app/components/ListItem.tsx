@@ -1,23 +1,36 @@
 import Link from "next/link"
 import getFormattedDate from "@/lib/getFormattedDate"
+import styles from './ListItem.module.css'
+import Image from "next/image"
 
 type Props = {
     post: Meta
 }
 
 export default function ListItem({ post }: Props) {
-    const { id, title, date } = post
+    const { id, title, date, subtitle, image, price, areal } = post
     const formattedDate = getFormattedDate(date)
 
     return (
-        <li className="mt-4 text-2xl dark:text-white/90">
-            <Link
-                className="underline hover:text-black/70 dark:hover:text-white"
-                href={`/posts/${id}`}>
-                {title}
-            </Link>
-            <br />
-            <p className="text-sm mt-1">{formattedDate}</p>
-        </li>
+        <Link href={`/posts/${id}`}>
+            <div className={styles.container}>
+                <Image
+                    className={styles.image}
+                    src={image ? `https://raw.githubusercontent.com/flemmingkrogolsen/blogposts/main/images/${image}` : "/images/default.jpg"}
+                    alt={"alt"}
+                    width={200}
+                    height={140}
+                    priority={true}
+                />
+                <div className={styles.text_container}>
+                    <h1 className={styles.header}>{title}</h1>
+                    <p className={styles.text}>{subtitle}</p>
+                    <br />
+                    <p className={styles.text}>{price ? `Price: ${price}` : ""}</p>
+                    <p className={styles.text}>{areal ? `Areal: ${areal}` : ""}</p>
+                    <p className={styles.text}>Added: {formattedDate}</p>
+                </div>
+            </div >
+        </Link >
     )
 }

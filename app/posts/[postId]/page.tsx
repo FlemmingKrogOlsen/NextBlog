@@ -4,8 +4,9 @@ import { notFound } from "next/navigation"
 import Link from "next/link"
 
 import 'highlight.js/styles/github-dark.css'
+import styles from './page.module.css'
 
-export const revalidate = 86400
+export const revalidate = 10
 
 type Props = {
     params: {
@@ -54,20 +55,23 @@ export default async function Post({ params: { postId } }: Props) {
 
     return (
         <>
-            <h2 className="text-3xl mt-4 mb-0">{meta.title}</h2>
-            <p className="mt-0 text-sm">
-                {pubDate}
-            </p>
-            <article>
+            <h2 className={styles.title}>{meta.title}</h2>
+            <p className={styles.subtitle}>{meta.subtitle}</p>
+            <article className={styles.article}>
                 {content}
             </article>
-            <section>
-                <h3>Related:</h3>
-                <div className="flex flex-row gap-4">
+            <section className={styles.section}>
+                <h3 className={styles.header3}>Related:</h3>
+                <div className={styles.tags}>
                     {tags}
                 </div>
             </section>
-            <p className="mb-10">
+            <br />
+            <br />
+            <p className={styles.date}>
+                Posted: {pubDate}
+            </p>
+            <p className={styles.home}>
                 <Link href="/">← Back to home</Link>
             </p>
         </>

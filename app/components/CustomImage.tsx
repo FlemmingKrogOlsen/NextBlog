@@ -1,4 +1,5 @@
 import Image from "next/image"
+import styles from './CustomImage.module.css'
 
 type Props = {
     src: string,
@@ -12,15 +13,16 @@ export default function CustomImage({ src, alt, priority }: Props) {
 
     return (
 
-        <div className="w-full h-full">
+        <div className={styles.container}>
             <Image
-                className="rounded-lg mx-auto"
+                className={styles.image}
                 src={src}
                 alt={alt}
-                width={650}
-                height={650}
+                width={1000}
+                height={760}
                 priority={prty}
             />
         </div>
     )
 }
+
