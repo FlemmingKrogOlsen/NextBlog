@@ -9,8 +9,8 @@ export const Container = styled.footer`
   justify-content: space-between;
   padding: 1rem 1rem;
   @media (min-width: 768px) {
-    font-size: 2rem;
-    padding: 2rem 0rem;
+    font-size: 1rem;
+    padding: 1rem 0rem;
     width: 1000px;
     margin: 0 auto;
   } 
@@ -18,5 +18,26 @@ export const Container = styled.footer`
 
 export const Outer = styled.div`
   background-color: rgb(71 85 105);
+`
+
+export const Inner = styled.div`
+  display:flex;
+  justify-content: space-between;
+  width:40%;
+  align-items: center;
+`
+
+export const Adress = styled.div`
+  display:flex;
+  justify-content: space-between;
+  flex-direction: column;
   
+  align-items: center;
+  p {
+    margin-right: 20px;
+  }
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+} 
 `

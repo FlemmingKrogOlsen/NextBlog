@@ -1,19 +1,19 @@
-import { Container, Outer } from "@/styles/FooterStyle";
+import { Adress, Container, Inner, Outer } from "@/styles/FooterStyle";
 
 export default function Footer() {
     return (
         <Outer>
             <Container>
-                <div>
-                    Firma adresse<br />
-                    Firma adresse<br />
-                    Firma adresse<br />
-                </div>
-                <div>
-                    Who are we?<br />
-                    Contact Us<br />
-                    FAQ's<br />
-                </div>
+                <Adress>
+                    <p>Firma adresse</p>
+                    <p>Firma adresse</p>
+                    <p>Firma adresse</p>
+                </Adress>
+                <Inner>
+                    <p>Who are we?</p>
+                    <p>Contact Us</p>
+                    <p>FAQ's</p>
+                </Inner>
             </Container>
         </Outer>
     )
