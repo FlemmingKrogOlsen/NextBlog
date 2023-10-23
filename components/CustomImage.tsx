@@ -11,7 +11,6 @@ export default function CustomImage({ src, alt, priority }: Props) {
     const prty = priority ? true : false
 
     return (
-
         <Container>
             <StyledImage
                 src={src}
