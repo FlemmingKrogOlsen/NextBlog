@@ -1,41 +1,33 @@
-import Navbar from './components/Navbar'
+import Navbar from '@/components/Navbar'
 import { Metadata } from 'next'
-import './globals.css'
-import styles from './layout.module.css'
+import StyledComponentsRegistry from '@/lib/registry'
+import GlobalStyles from '@/styles/GlobalStyle'
+import { Main } from '@/styles/LayoutStyle'
+import HeroBanner from '@/components/HeroBanner'
+import Footer from '@/components/Footer'
+
+type Props = {
+  children: React.ReactNode
+}
 
 export const metadata: Metadata = {
   title: "United Real Estate",
   description: 'Created by KrogOlsen S.A.R.L.',
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: Props) {
   return (
     <html lang="en">
-      <body className={styles.body}>
-        <Navbar />
-        <div className={styles.hero}>
-          <div className={styles.container}>
-            HeroBanner<br />
-            Affordable Housing.....
-          </div>
-        </div>
-        <main className={styles.main}>
-          {children}
-        </main>
-        <footer className={styles.footer}>
-          <div>
-            Firma adresse<br />
-            Firma adresse<br />
-            Firma adresse<br />
-          </div>
-            <p>Who are we?</p>
-            <p>Contact Us</p>
-            <p>FAQ's</p>
-        </footer>
+      <body>
+        <StyledComponentsRegistry>
+          <GlobalStyles />
+          <Navbar />
+          <HeroBanner />
+          <Main>
+            {children}
+          </Main>
+          <Footer />
+        </StyledComponentsRegistry>
       </body>
     </html>
   )

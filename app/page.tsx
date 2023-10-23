@@ -1,4 +1,4 @@
-import Posts from "./components/Posts"
+import Posts from "@/components/Posts"
 
 export const revalidate = 10 // 86400 full day
 

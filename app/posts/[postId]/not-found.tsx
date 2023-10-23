@@ -1,11 +1,11 @@
 import Link from "next/link"
-import styles from './no-found.module.css'
+import { Container, Text } from "@/styles/NotFoundStyle"
 
 export default function NotFound() {
     return (
-        <div className={styles.container}>
-            <p className={styles.text}>Sorry, the requested post does not exist.</p>
+        <Container>
+            <Text>Sorry, the requested post does not exist.</Text>
             <Link href="/">Back to Home</Link>
-        </div>
+        </Container>
     )
 }

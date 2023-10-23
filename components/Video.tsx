@@ -1,4 +1,4 @@
-import styles from './Video.module.css'
+import { Container, Iframe } from '@/styles/VideoStyle';
 
 type Props = {
     id: string
@@ -6,13 +6,12 @@ type Props = {
 
 export default function Video({ id }: Props) {
     return (
-        <div className={styles.container}>
-            <iframe
-                className={styles.iframe}
+        <Container>
+            <Iframe
                 src={`https://www.youtube.com/embed/${id}`}
                 title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             />
-        </div>
+        </Container>
     );
 }

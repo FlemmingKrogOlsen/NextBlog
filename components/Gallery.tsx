@@ -2,8 +2,7 @@
 
 import React from 'react'
 import Video from './Video'
-import Image from 'next/image'
-import styles from './Gallery.module.css'
+import { Container, ImageSide, StyledImage, VideoSide } from '@/styles/GalleryStyle'
 
 type Props = {
     videoId: string,
@@ -12,25 +11,24 @@ type Props = {
 
 export default function Gallery({ videoId, images }: Props) {
     return (
-        <div className={styles.container}>
-            <div className={styles.imageSide}>
-                {images.map((image) => {
+        <Container>
+            <ImageSide>
+                {images.map((image,index) => {
                     return (
-                        <Image
-                        key={image}
-                            className={styles.image}
+                        <StyledImage
+                            key={index}
                             src={image ? `https://raw.githubusercontent.com/flemmingkrogolsen/blogposts/main/images/${image}` : "/images/default.jpg"}
                             alt={"alt"}
-                            width={230}
+                            width={237}
                             height={140}
                             priority={true}
                         />
                     )
                 })}
-            </div>
-            <div className={styles.videoSide}>
+            </ImageSide>
+            <VideoSide>
                 <Video id={videoId} />
-            </div>
-        </div>
+            </VideoSide>
+        </Container>
     )
 }
