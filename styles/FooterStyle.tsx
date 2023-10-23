@@ -3,6 +3,7 @@
 import styled from 'styled-components'
 
 export const Container = styled.footer`
+  color: white;
   font-size: 0.75rem;
   display: flex;
   justify-content: space-between;
