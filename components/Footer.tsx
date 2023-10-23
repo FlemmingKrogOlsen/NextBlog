@@ -12,7 +12,6 @@ export default function Footer() {
                 <Inner>
                     <p>Who are we?</p>
                     <p>Contact Us</p>
-                    <p>FAQ's</p>
                 </Inner>
             </Container>
         </Outer>

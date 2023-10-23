@@ -21,9 +21,10 @@ export const Outer = styled.div`
 `
 
 export const Inner = styled.div`
+
   display:flex;
-  justify-content: space-between;
-  width:40%;
+  justify-content: space-around;
+  width:200px;
   align-items: center;
 `
 
