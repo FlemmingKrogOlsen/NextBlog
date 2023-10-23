@@ -19,7 +19,7 @@ export default function Gallery({ videoId, images }: Props) {
                             key={index}
                             src={image ? `https://raw.githubusercontent.com/flemmingkrogolsen/blogposts/main/images/${image}` : "/images/default.jpg"}
                             alt={"alt"}
-                            width={237}
+                            width={350}
                             height={140}
                             priority={true}
                         />

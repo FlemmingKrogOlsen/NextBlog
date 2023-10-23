@@ -16,8 +16,8 @@ export default function CustomImage({ src, alt, priority }: Props) {
             <StyledImage
                 src={src}
                 alt={alt}
-                width={1000}
-                height={760}
+                width={350}
+                height={140}
                 priority={prty}
             />
         </Container>
