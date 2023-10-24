@@ -38,24 +38,23 @@ export default function Gallery({ videoId, images }: Props) {
             <VideoSide>
                 <Video id={videoId} />
             </VideoSide>
-            {isMobile() 
-                ? ("") 
+            {isMobile()
+                ? ("")
                 : (
                     <Modal
-                    title=""
-                    show={show}
-                    onClose={() => setShow(false)}
-                >
-                    <Image
-                        src={`https://raw.githubusercontent.com/flemmingkrogolsen/blogposts/main/images/${showImage}`}
-                        alt="Image"
-                        width={1000}
-                        height={400}
-                        priority={true}
-
-                    />
-                </Modal>
-            )}
+                        title=""
+                        show={show}
+                        onClose={() => setShow(false)}
+                    >
+                        <Image
+                            src={`https://raw.githubusercontent.com/flemmingkrogolsen/blogposts/main/images/${showImage}`}
+                            alt="Image"
+                            width={1000}
+                            height={400}
+                            priority={true}
+                        />
+                    </Modal>
+                )}
         </Container>
     )
 }

@@ -21,24 +21,21 @@ export const Outer = styled.div`
 `
 
 export const Inner = styled.div`
-
   display:flex;
   justify-content: space-around;
   width:200px;
   align-items: center;
 `
 
-export const Adress = styled.div`
+export const Address = styled.div`
   display:flex;
   justify-content: space-between;
   flex-direction: column;
-  
   align-items: center;
   p {
     margin-right: 20px;
   }
-
   @media (min-width: 768px) {
     flex-direction: row;
-} 
+  } 
 `

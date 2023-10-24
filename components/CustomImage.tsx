@@ -7,9 +7,6 @@ type Props = {
 }
 
 export default function CustomImage({ src, alt, priority }: Props) {
-
-    const prty = priority ? true : false
-
     return (
         <Container>
             <StyledImage
@@ -17,7 +14,7 @@ export default function CustomImage({ src, alt, priority }: Props) {
                 alt={alt}
                 width={350}
                 height={140}
-                priority={prty}
+                priority={priority ? true : false}
             />
         </Container>
     )

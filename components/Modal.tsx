@@ -1,6 +1,5 @@
 import { CloseButton, Container, Header, Overlay } from "@/styles/ModalStyle";
 
-
 interface IProps extends ShowType {
     children: React.ReactNode;
     title: string;

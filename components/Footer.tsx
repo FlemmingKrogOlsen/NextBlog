@@ -1,14 +1,14 @@
-import { Adress, Container, Inner, Outer } from "@/styles/FooterStyle";
+import { Address, Container, Inner, Outer } from "@/styles/FooterStyle";
 
 export default function Footer() {
     return (
         <Outer>
             <Container>
-                <Adress>
+                <Address>
                     <p>Firma adresse</p>
                     <p>Firma adresse</p>
                     <p>Firma adresse</p>
-                </Adress>
+                </Address>
                 <Inner>
                     <p>Who are we?</p>
                     <p>Contact Us</p>
