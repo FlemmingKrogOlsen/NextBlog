@@ -13,6 +13,7 @@ export const Iframe = styled.iframe`
     width: 100%;
     height: 100%;
     border-radius: 1rem;
-    overflow:hidden;  
-    background-color  :white ;
+    overflow: hidden;  
+    background-color: white ;
+    display: block;
 `
