@@ -16,4 +16,5 @@ export const Iframe = styled.iframe`
     overflow: hidden;  
     background-color: white ;
     display: block;
+    border: 0px;
 `
