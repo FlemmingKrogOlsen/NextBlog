@@ -11,8 +11,9 @@ type Props = {
 }
 
 export const metadata: Metadata = {
-  title: "United Real Estate Tanger",
+  title: 'United Real Estate Tanger',
   description: 'Building affordable housing in Morocco Tanger',
+  keywords: 'Housing, Affordable, Morocco, Tanger',
 }
 
 export default function RootLayout({ children }: Props) {
