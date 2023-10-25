@@ -20,7 +20,8 @@ export const StyledImage = styled(Image)`
   margin: 0 auto;
   @media (min-width: 768px) {
     width: 100%;
-    height: 270px;
+    height: auto;
+    /* height: 270px; */
   }
 `
 

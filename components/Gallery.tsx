@@ -25,7 +25,8 @@ export default function Gallery({ videoId, images }: Props) {
                             src={image ? `https://raw.githubusercontent.com/flemmingkrogolsen/blogposts/main/images/${image}` : "/images/default.jpg"}
                             alt={"Photo from selected article"}
                             width={250}
-                            height={138}
+                            height={0}
+                            sizes="100vw"
                             priority={true}
                             role="button"
                             onClick={() => {
