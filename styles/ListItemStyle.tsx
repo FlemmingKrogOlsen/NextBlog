@@ -18,11 +18,8 @@ export const Container = styled.div`
 
 export const StyledImage = styled(Image)`
   margin: 0 auto;
-  @media (min-width: 768px) {
-    width: 100%;
-    height: auto;
-    /* height: 270px; */
-  }
+  width: 100%;
+  height: auto;
 `
 
 export const TextContainer = styled.div`

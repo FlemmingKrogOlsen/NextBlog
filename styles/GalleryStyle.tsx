@@ -19,11 +19,10 @@ border: 5px solid white;
 border-radius: 1rem;
 margin-top: 0.5rem;
 cursor: zoom-in;
+height: auto;
 
 @media (min-width: 768px) {
     width: 250px;
-    height: auto;
-    /* height: 138px; */
   }
 `
 
