@@ -11,7 +11,7 @@ type Props = {
 }
 
 const title = "United Real Estate - Morocco / Tanger"
-const description = "United Real Estate - Building affordable housing in Morocco Tanger"
+const description = "United Real Estate - Aims to Build affordable housing in Morocco / Tanger."
 const weburl = "https://next-blog-nu-lac.vercel.app/"
 const imageName = "https://next-blog-nu-lac.vercel.app/images/default.jpg"
 
@@ -25,11 +25,15 @@ export const metadata: Metadata = {
     icon: '/favicon-32x32.png',
     shortcut: '/favicon-16x16.png',
     apple: '/apple-touch-icon.png',
-    other: {
+    other: [{
       rel: 'mask-icon',
       url: '/safari-pinned-tab.svg',
       color: '#5bbad5'
-    }
+    },
+    {
+      rel: 'canonical',
+      url: weburl
+    }]
   },
 
   openGraph: {
