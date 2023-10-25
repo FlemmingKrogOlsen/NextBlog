@@ -7,11 +7,11 @@ export default function Navbar() {
     return (
         <NavBar>
             <Container>
-                <Header>
-                    <Link href="/">
-                    United Real Estate
-                    </Link>
-                </Header>
+                <Link href="/">
+                    <Header>
+                        United Real Estate
+                    </Header>
+                </Link>
                 <SoMe>
                     <Link href="https://wa.me/004527286396" aria-label="Call us on WhatsApp">
                         <FaWhatsapp />
