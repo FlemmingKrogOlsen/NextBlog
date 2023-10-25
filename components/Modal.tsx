@@ -9,7 +9,7 @@ interface IProps extends ShowType {
 const Modal = ({ children, title, show, onClose }: IProps) => {
   return (
     <>
-      <Container show={show} aria-modal role="dialog" aria-hidden={show}>
+      <Container show={show} aria-modal="true" role="dialog" aria-hidden={show}>
         <Header>
           <h2>{title}</h2>
           <CloseButton onClick={onClose}>&times;</CloseButton>
