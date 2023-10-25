@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import Video from './Video'
-import { Container, ImageSide, StyledImage, VideoSide } from '@/styles/GalleryStyle'
+import { Container, ImageSide, ModalImage, StyledImage, VideoSide } from '@/styles/GalleryStyle'
 import Modal from './Modal'
 import Image from 'next/image'
 import isMobile from '@/lib/isMobile'
@@ -48,11 +48,12 @@ export default function Gallery({ videoId, images }: Props) {
                         show={show}
                         onClose={() => setShow(false)}
                     >
-                        <Image
+                        <ModalImage
                             src={`https://raw.githubusercontent.com/flemmingkrogolsen/blogposts/main/images/${showImage}`}
                             alt="Image"
-                            width={1000}
-                            height={400}
+                            width={0}
+                            height={0}
+                            sizes="100vw"
                             priority={true}
                         />
                     </Modal>

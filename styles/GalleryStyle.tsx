@@ -26,6 +26,11 @@ height: auto;
   }
 `
 
+export const ModalImage = styled(Image)`
+  width: 1000px;
+  height: auto;
+`
+
 export const VideoSide = styled.div`
 margin-top: 0.5rem;
 border: 5px solid white;
