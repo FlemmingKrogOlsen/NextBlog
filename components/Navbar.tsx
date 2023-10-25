@@ -9,7 +9,7 @@ export default function Navbar() {
             <Container>
                 <Header>
                     <Link href="/">
-                        United Real Estate
+                        United Real Estate Tanger
                     </Link>
                 </Header>
                 <SoMe>
