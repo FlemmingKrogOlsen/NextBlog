@@ -16,8 +16,8 @@ export default function ListItem({ post }: Props) {
                 <StyledImage
                     src={image ? `https://raw.githubusercontent.com/flemmingkrogolsen/blogposts/main/images/${image}` : "/images/default.jpg"}
                     alt={title}
-                    width={350}
-                    height={140}
+                    width={490}
+                    height={270}
                     priority={true}
                 />
                 <Header>{title ? title : "Not specified"}</Header>

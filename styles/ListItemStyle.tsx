@@ -20,7 +20,7 @@ export const StyledImage = styled(Image)`
   margin: 0 auto;
   @media (min-width: 768px) {
     width: 100%;
-    height: 196px;
+    height: 270px;
   }
 `
 
@@ -45,6 +45,6 @@ export const Header = styled.h2`
   font-size: 1.25rem;
   color: lightgray;
   @media (min-width: 768px) {
-    top: 170px;
+    top: 240px;
   }
 `

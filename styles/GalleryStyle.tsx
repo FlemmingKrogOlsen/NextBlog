@@ -15,14 +15,13 @@ export const Container = styled.div`
 
 export const StyledImage = styled(Image)`
 width: 100%;
-aspect-ratio: 5/2;
 border: 5px solid white;
 border-radius: 1rem;
 margin-top: 0.5rem;
 
 @media (min-width: 768px) {
-    width: 260px;
-    height: 104px;
+    width: 250px;
+    height: 138px;
   }
 `
 
@@ -31,7 +30,7 @@ margin-top: 0.5rem;
 border: 5px solid white;
 border-radius: 1.25rem;
 @media (min-width: 768px) {
-  width: 17%;
+  width: 20%;
   }
 `
 
@@ -40,6 +39,6 @@ display: flex;
 flex-wrap: wrap;
 justify-content: space-around;
 @media (min-width: 768px) {
-  width: 83%
+  width: 80%
   }
 `

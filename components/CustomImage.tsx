@@ -13,10 +13,9 @@ export default function CustomImage({ src, alt, priority }: Props) {
                 src={src}
                 alt={alt}
                 width={350}
-                height={140}
+                height={193}
                 priority={priority ? true : false}
             />
         </Container>
     )
 }
-
