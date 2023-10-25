@@ -13,13 +13,13 @@ export default function Navbar() {
                     </Link>
                 </Header>
                 <SoMe>
-                    <Link href="https://wa.me/004527286396" aria-labelledby="Call us on WhatsApp">
+                    <Link href="https://wa.me/004527286396" aria-label="Call us on WhatsApp">
                         <FaWhatsapp />
                     </Link>
-                    <Link href="https://github.com/FlemmingKrogOlsen" aria-labelledby="Visit us at InstaGram">
+                    <Link href="https://github.com/FlemmingKrogOlsen" aria-label="Visit us at InstaGram">
                         <FaInstagram />
                     </Link>
-                    <Link href="https://github.com/FlemmingKrogOlsen"  aria-labelledby="Visit us at Facebook">
+                    <Link href="https://github.com/FlemmingKrogOlsen" aria-label="Visit us at Facebook">
                         <FaFacebookSquare />
                     </Link>
                 </SoMe>
