@@ -8,6 +8,7 @@ export const NavBar = styled.nav`
   top: 0;
   position: sticky;
     z-index: 10;
+
   @media (min-width: 768px) {
   } 
 `
@@ -41,6 +42,9 @@ export const SoMe = styled.div`
   line-height: 1.5rem;
   gap: 1rem;
   vertical-align: middle; 
+  a:hover {
+    color: lightgray;
+  }
   @media (min-width: 768px) {
     font-size: 2.25rem;
     line-height: 2.5rem;

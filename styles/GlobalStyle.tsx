@@ -18,9 +18,7 @@ const GlobalStyles = createGlobalStyle`
     color: white;
   }
 
-  a:hover {
-    color: lightgray;
-  }
+
 
   ul {
     list-style: none;
