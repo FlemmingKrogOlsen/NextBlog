@@ -51,6 +51,7 @@ export const metadata: Metadata = {
     title: title,
     description: description,
     images: [imageName],
+    site: "United Real Estate"
   },
 }
 
