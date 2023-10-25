@@ -41,23 +41,6 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Props) {
   return (
     <html lang="en">
-      {/* <Head>
-
-
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://next-blog-nu-lac.vercel.app/" />
-        <meta property="og:title" content="United Real Estate Tanger" />
-        <meta property="og:description" content="Building affordable housing in Morocco Tanger" />
-        <meta property="og:image" content={`https://next-blog-nu-lac.vercel.app/images/${imageName}`} />
-
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://next-blog-nu-lac.vercel.app/" />
-        <meta property="twitter:title" content="United Real Estate Tanger" />
-        <meta property="twitter:description" content="Building affordable housing in Morocco Tanger" />
-        <meta property="twitter:image" content={`https://next-blog-nu-lac.vercel.app/images/${imageName}`} />
-
-      </Head> */}
-
       <body>
         <StyledComponentsRegistry>
           <GlobalStyles />
