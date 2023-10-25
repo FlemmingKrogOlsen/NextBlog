@@ -10,8 +10,8 @@ type Props = {
   children: React.ReactNode
 }
 
-const title = "United Real Estate Tanger"
-const description = "Building affordable housing in Morocco Tanger"
+const title = "United Real Estate - Morocco / Tanger"
+const description = "United Real Estate - Building affordable housing in Morocco Tanger"
 const weburl = "https://next-blog-nu-lac.vercel.app/"
 const imageName = "https://next-blog-nu-lac.vercel.app/images/default.jpg"
 
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
       color: '#5bbad5'
     }
   },
-  
+
   openGraph: {
     type: "website",
     url: weburl,
