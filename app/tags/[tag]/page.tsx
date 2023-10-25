@@ -48,7 +48,7 @@ export default async function TagPostList({ params: { tag } }: Props) {
     return (
         <>
             <HomeLink>
-                <Link href="/">← Back</Link>
+                <Link href="/">← Back to Home</Link>
             </HomeLink>
             <Header>Results for: #{tag}</Header>
             <Section>

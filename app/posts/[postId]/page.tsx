@@ -54,7 +54,7 @@ export default async function Post({ params: { postId } }: Props) {
     return (
         <>
             <HomeLink>
-                <Link href="/">← Back</Link>
+                <Link href="/">← Back to Home</Link>
             </HomeLink>
             <Header>{meta.title}</Header>
             <SubTitle>{meta.subtitle}</SubTitle>
