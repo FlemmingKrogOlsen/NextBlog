@@ -15,7 +15,7 @@ export default function ListItem({ post }: Props) {
             <Link href={`/posts/${id}`}>
                 <StyledImage
                     src={image ? `https://raw.githubusercontent.com/flemmingkrogolsen/blogposts/main/images/${image}` : "/images/default.jpg"}
-                    alt={"alt"}
+                    alt={title}
                     width={350}
                     height={140}
                     priority={true}

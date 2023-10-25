@@ -23,10 +23,11 @@ export default function Gallery({ videoId, images }: Props) {
                         <StyledImage
                             key={index}
                             src={image ? `https://raw.githubusercontent.com/flemmingkrogolsen/blogposts/main/images/${image}` : "/images/default.jpg"}
-                            alt={"alt"}
+                            alt={"Photo from selected article"}
                             width={350}
                             height={140}
                             priority={true}
+                            role="button"
                             onClick={() => {
                                 setShowImage(image)
                                 setShow(true)
