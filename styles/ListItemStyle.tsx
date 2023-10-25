@@ -33,7 +33,7 @@ export const Text = styled.div`
   justify-content: space-between;
 `
 
-export const Header = styled.h1`
+export const Header = styled.h2`
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;

@@ -11,8 +11,8 @@ type Props = {
 }
 
 export const metadata: Metadata = {
-  title: "United Real Estate",
-  description: 'Created by KrogOlsen S.A.R.L.',
+  title: "United Real Estate Tanger",
+  description: 'Building affordable housing in Morocco Tanger',
 }
 
 export default function RootLayout({ children }: Props) {
