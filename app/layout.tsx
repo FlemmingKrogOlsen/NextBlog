@@ -19,6 +19,19 @@ export const metadata: Metadata = {
   title: title,
   description: description,
   keywords: 'Housing, Affordable, Morocco, Tanger',
+
+  manifest: `${weburl}site.webmanifest`,
+  icons: {
+    icon: '/favicon-32x32.png',
+    shortcut: '/favicon-16x16.png',
+    apple: '/apple-touch-icon.png',
+    other: {
+      rel: 'mask-icon',
+      url: '/safari-pinned-tab.svg',
+      color: '#5bbad5'
+    }
+  },
+  
   openGraph: {
     type: "website",
     url: weburl,
