@@ -33,7 +33,6 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: title,
     description: description,
-    creator: "KrogOlsen S.A.R.L.",
     images: [imageName],
   },
 }
