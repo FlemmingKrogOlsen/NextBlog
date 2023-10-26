@@ -37,7 +37,7 @@ export const Header = styled.h2`
   overflow: hidden;
   max-width: 350px;
   position: absolute;
-  top: 115px;
+  top: 165px;
   left: 0.5rem;
   text-shadow: 1px 1px 2px black;
   font-size: 1.25rem;
