@@ -1,6 +1,6 @@
 import Link from "next/link"
 import getFormattedDate from "@/lib/getFormattedDate"
-import { Container, Header, StyledImage, Text, TextContainer } from "@/styles/ListItemStyle"
+import { Container, Header, StyledImage, Text, TextContainer, ImageContainer } from "@/styles/ListItemStyle"
 
 type Props = {
     post: Meta
@@ -13,15 +13,17 @@ export default function ListItem({ post }: Props) {
     return (
         <Container>
             <Link href={`/posts/${id}`}>
-                <StyledImage
-                    src={image ? `https://raw.githubusercontent.com/flemmingkrogolsen/blogposts/main/images/${image}` : "/images/default.jpg"}
-                    alt={title}
-                    width={490}
-                    height={0}
-                    sizes="100vw"
-                    priority={true}
-                />
-                <Header>{title ? title : "Not specified"}</Header>
+                <ImageContainer>
+                    <StyledImage
+                        src={image ? `https://raw.githubusercontent.com/flemmingkrogolsen/blogposts/main/images/${image}` : "/images/default.jpg"}
+                        alt={title}
+                        width={490}
+                        height={0}
+                        sizes="100vw"
+                        priority={true}
+                    />
+                    <Header>{title ? title : "Not specified"}</Header>
+                </ImageContainer>
                 <TextContainer>
                     <Text>{subtitle ? subtitle : "Not specified"}</Text>
                     <br />

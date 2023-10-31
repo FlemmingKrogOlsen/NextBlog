@@ -16,6 +16,10 @@ export const Container = styled.div`
   }
 `
 
+export const ImageContainer = styled.div`
+  position: relative;
+`
+
 export const StyledImage = styled(Image)`
   margin: 0 auto;
   width: 100%;
@@ -37,12 +41,9 @@ export const Header = styled.h2`
   overflow: hidden;
   max-width: 350px;
   position: absolute;
-  top: 165px;
+  bottom: 10px;
   left: 0.5rem;
   text-shadow: 1px 1px 2px black;
   font-size: 1.25rem;
   color: lightgray;
-  @media (min-width: 768px) {
-    top: 240px;
-  }
 `
