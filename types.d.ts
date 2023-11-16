@@ -1,19 +1,23 @@
 type Meta = {
-    id: string;
-    title: string;
-    subtitle: string;
-    date: string;
-    tags: string[];
-    image: string;
-    price: string;
-    areal: string;
-}
+  id: string;
+  title: string;
+  subtitle: string;
+  date: string;
+  tags: string[];
+  image: string;
+  price: string;
+  areal: string;
+};
 
 type BlogPost = {
-    meta: Meta,
-    content: ReactElement<any, string | JSXElementConstructor<any>>
-}
+  meta: Meta;
+  content: ReactElement<any, string | JSXElementConstructor<any>>;
+};
 
 type ShowType = {
-    show: boolean;
- };
+  show: boolean;
+};
+
+type Children = {
+  children: React.ReactNode;
+};

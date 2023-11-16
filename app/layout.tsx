@@ -1,23 +1,18 @@
-import Navbar from '@/components/Navbar'
 import { Metadata } from 'next'
-import HeroBanner from '@/components/HeroBanner'
-import Footer from '@/components/Footer'
+import App from './App'
 import '@/styles/global.css'
-import styles from '@/styles/Layout.module.css'
 
-type Props = {
-  children: React.ReactNode
-}
-
-const title = "United Real Estate - Morocco / Tanger"
-const description = "United Real Estate - Aims to Build affordable housing in Morocco / Tanger."
+const myTitle = "United Real Estate"
+const title = myTitle + " - Morocco / Tanger"
+const description = myTitle + " - Aims to Build affordable housing in Morocco / Tanger."
 const weburl = "https://next-blog-nu-lac.vercel.app/"
 const imageName = "https://next-blog-nu-lac.vercel.app/images/default.jpg"
+const keywords = "Housing, Affordable, Morocco, Tanger"
 
 export const metadata: Metadata = {
   title: title,
   description: description,
-  keywords: 'Housing, Affordable, Morocco, Tanger',
+  keywords: keywords,
 
   manifest: `${weburl}site.webmanifest`,
   icons: {
@@ -50,20 +45,17 @@ export const metadata: Metadata = {
     title: title,
     description: description,
     images: [imageName],
-    site: "United Real Estate"
+    site: myTitle
   },
 }
 
-export default function RootLayout({ children }: Props) {
+export default function RootLayout({ children }: Children) {
   return (
     <html lang="en">
       <body>
-        <Navbar />
-        <HeroBanner />
-        <main className={styles.container}>
+        <App>
           {children}
-        </main>
-        <Footer />
+        </App>
       </body>
     </html>
   )
