@@ -1,0 +1,46 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.image {
+  width: 100%;
+  border: 5px solid white;
+  border-radius: 1rem;
+  margin-top: 0.5rem;
+  cursor: zoom-in;
+  height: auto;
+}
+
+.modalImage {
+  width: 1000px;
+  height: auto;
+}
+
+.videoContainer {
+  margin-top: 0.5rem;
+  border: 5px solid white;
+  border-radius: 1.25rem;
+}
+
+.imageContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+  }
+  .image {
+    width: 250px;
+  }
+  .videoContainer {
+    width: 20%;
+  }
+  .imageContainer {
+    width: 80%;
+  }
+}

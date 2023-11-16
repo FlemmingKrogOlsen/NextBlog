@@ -1,4 +1,5 @@
-import { Container, StyledImage } from "@/styles/CustomImageStyle"
+import Image from "next/image"
+import styles from '@/styles/CustomImage.module.css'
 
 type Props = {
     src: string,
@@ -8,14 +9,15 @@ type Props = {
 
 export default function CustomImage({ src, alt, priority }: Props) {
     return (
-        <Container>
-            <StyledImage
+        <div className={styles.container}>
+            <Image
+                className={styles.image}
                 src={src}
                 alt={alt}
                 width={350}
                 height={193}
                 priority={priority ? true : false}
             />
-        </Container>
+        </div>
     )
 }

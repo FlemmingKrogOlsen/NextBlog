@@ -1,10 +1,9 @@
 import Navbar from '@/components/Navbar'
 import { Metadata } from 'next'
-import StyledComponentsRegistry from '@/lib/registry'
-import GlobalStyles from '@/styles/GlobalStyle'
-import { Main } from '@/styles/LayoutStyle'
 import HeroBanner from '@/components/HeroBanner'
 import Footer from '@/components/Footer'
+import '@/styles/global.css'
+import styles from '@/styles/Layout.module.css'
 
 type Props = {
   children: React.ReactNode
@@ -59,15 +58,12 @@ export default function RootLayout({ children }: Props) {
   return (
     <html lang="en">
       <body>
-        <StyledComponentsRegistry>
-          <GlobalStyles />
-          <Navbar />
-          <HeroBanner />
-          <Main>
-            {children}
-          </Main>
-          <Footer />
-        </StyledComponentsRegistry>
+        <Navbar />
+        <HeroBanner />
+        <main className={styles.container}>
+          {children}
+        </main>
+        <Footer />
       </body>
     </html>
   )

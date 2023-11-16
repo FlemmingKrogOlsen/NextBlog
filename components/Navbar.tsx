@@ -1,18 +1,18 @@
 import Link from 'next/link'
 import React from 'react'
 import { FaWhatsapp, FaInstagram, FaFacebookSquare } from "react-icons/fa"
-import { Container, Header, NavBar, SoMe } from '@/styles/NavbarStyle'
+import styles from '@/styles/Navbar.module.css'
 
 export default function Navbar() {
     return (
-        <NavBar>
-            <Container>
+        <nav className={styles.navbar}>
+            <div className={styles.container}>
                 <Link href="/">
-                    <Header>
+                    <h1 className={styles.header}>
                         United Real Estate
-                    </Header>
+                    </h1>
                 </Link>
-                <SoMe>
+                <div className={styles.some}>
                     <Link href="https://wa.me/004527286396" aria-label="Call us on WhatsApp">
                         <FaWhatsapp />
                     </Link>
@@ -22,8 +22,8 @@ export default function Navbar() {
                     <Link href="https://github.com/FlemmingKrogOlsen" aria-label="Visit us at Facebook">
                         <FaFacebookSquare />
                     </Link>
-                </SoMe>
-            </Container>
-        </NavBar>
+                </div>
+            </div>
+        </nav>
     )
 }

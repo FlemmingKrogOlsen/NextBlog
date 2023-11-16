@@ -1,0 +1,50 @@
+.header {
+  font-size: 1.5;
+  line-height: 1.75rem;
+  margin: 0.5rem 0;
+  color: white;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .header {
+    font-size: 3rem;
+    line-height: 3.25rem;
+    margin: 1rem 0;
+  }
+}
+
+.subTitle {
+  font-size: 0.75rem;
+  line-height: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 0px;
+  color: white;
+  padding: 0 1rem;
+}
+
+.article {
+  color: white;
+  font-size: 1rem;
+  padding: 0 1rem;
+}
+
+.section {
+  margin-top: 1rem;
+  padding: 0 1rem;
+}
+
+.sectionHeader {
+  color: white;
+}
+
+.tags {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  color: white;
+}
+
+.homeLink {
+  color: white;
+}

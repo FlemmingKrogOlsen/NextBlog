@@ -1,6 +1,6 @@
 import { getPostsMeta } from "@/lib/posts"
 import ListItem from "./ListItem"
-import { Header, List, Section } from "@/styles/PostsStyle"
+import styles from '@/styles/Posts.module.css'
 
 export default async function Posts() {
     const posts = await getPostsMeta()
@@ -10,13 +10,13 @@ export default async function Posts() {
     }
 
     return (
-        <Section>
-            <Header>Available Apartments</Header>
-            <List>
+        <section className={styles.section}>
+            <h2 className={styles.header}>Available Apartments</h2>
+            <div className={styles.list}>
                 {posts.map(post => (
                     <ListItem key={post.id} post={post} />
                 ))}
-            </List>
-        </Section>
+            </div>
+        </section>
     )
 }

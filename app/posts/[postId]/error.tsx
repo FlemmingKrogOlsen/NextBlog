@@ -2,7 +2,7 @@
 
 import { useEffect } from 'react';
 import Link from 'next/link';
-import { Header, Main, Text } from '@/styles/ErrorStyle';
+import styles from '@/styles/error.module.css'
 
 export default function Error({
     error,
@@ -17,11 +17,11 @@ export default function Error({
     }, [error]);
 
     return (
-        <Main>
-            <Header>Something went wrong!</Header>
-            <Text>
+        <main className={styles.main}>
+            <h2 className={styles.header}>Something went wrong!</h2>
+            <p className={styles.text}>
                 Or go back to <Link href="/">Home 🏠</Link>
-            </Text>
-        </Main>
+            </p>
+        </main>
     );
 }

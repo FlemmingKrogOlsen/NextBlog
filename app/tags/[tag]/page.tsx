@@ -1,8 +1,7 @@
 import { getPostsMeta } from "@/lib/posts"
 import ListItem from "@/components/ListItem"
 import Link from "next/link"
-import { ErrorText, Header, KeywordError, List, Section } from "@/styles/TagsPageStyle"
-import { HomeLink } from "@/styles/PostPageStyle"
+import styles from '@/styles/TagsPage.module.css'
 
 export const revalidate = 10
 
@@ -32,32 +31,32 @@ export function generateMetadata({ params: { tag } }: Props) {
 export default async function TagPostList({ params: { tag } }: Props) {
     const posts = await getPostsMeta() //deduped!
 
-    if (!posts) return <ErrorText>Sorry, no posts available.</ErrorText>
+    if (!posts) return <p className={styles.error}>Sorry, no posts available.</p>
 
     const tagPosts = posts.filter(post => post.tags.includes(tag))
 
     if (!tagPosts.length) {
         return (
-            <KeywordError>
+            <div className={styles.keywordError}>
                 <p>Sorry, no posts for that keyword.</p>
                 <Link href="/">Back to Home</Link>
-            </KeywordError>
+            </div>
         )
     }
 
     return (
         <>
-            <HomeLink>
+            <p className={styles.homeLink}>
                 <Link href="/">← Back to Home</Link>
-            </HomeLink>
-            <Header>Results for: #{tag}</Header>
-            <Section>
-                <List>
+            </p>
+            <h2 className={styles.header}>Results for: #{tag}</h2>
+            <section className={styles.section}>
+                <div className={styles.list}>
                     {tagPosts.map(post => (
                         <ListItem key={post.id} post={post} />
                     ))}
-                </List>
-            </Section>
+                </div>
+            </section>
         </>
     )
 }

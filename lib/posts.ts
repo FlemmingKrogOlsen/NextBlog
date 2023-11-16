@@ -1,7 +1,5 @@
 import rehypeSlug from "rehype-slug";
 import { compileMDX } from "next-mdx-remote/rsc";
-import rehypeAutolinkHeadings from "rehype-autolink-headings/lib";
-import rehypeHighlight from "rehype-highlight/lib";
 import Video from "@/components/Video";
 import CustomImage from "@/components/CustomImage";
 import Gallery from "@/components/Gallery";
@@ -52,16 +50,7 @@ export async function getPostByName(
     options: {
       parseFrontmatter: true,
       mdxOptions: {
-        rehypePlugins: [
-          rehypeHighlight,
-          rehypeSlug,
-          [
-            rehypeAutolinkHeadings,
-            {
-              behavior: "wrap",
-            },
-          ],
-        ],
+        rehypePlugins: [rehypeSlug],
       },
     },
   });

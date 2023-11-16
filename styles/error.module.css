@@ -1,21 +1,19 @@
-import styled from 'styled-components'
-
-export const Main = styled.main`
+.main {
   background-color: rgb(226 232 240);
   margin: 0 auto;
   max-width: 100px;
-  padding: 0.25rem 1rem;    
-`
+  padding: 0.25rem 1rem;
+}
 
-export const Header = styled.h2`
+.header {
   margin-top: 1rem;
   margin-bottom: 1rem;
   font-size: 1.5rem;
   line-height: 2rem;
-  font-weight: 700;    
-`
+  font-weight: 700;
+}
 
-export const Text = styled.p`
+.text {
   font-size: 1.875rem;
   line-height: 2.25rem;
-`
+}

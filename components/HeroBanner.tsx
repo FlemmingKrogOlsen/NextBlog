@@ -1,11 +1,11 @@
-import { Container } from "@/styles/HeroBannerStyle";
+import styles from '@/styles/HeroBanner.module.css'
 
 export default function HeroBanner() {
     return (
-        <Container>
-            <div>
+        <div className={styles.container}>
+            <div className={styles.header}>
                 Affordable Housing.....
             </div>
-        </Container>
+        </div>
     )
 }

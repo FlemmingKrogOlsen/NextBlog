@@ -2,8 +2,7 @@ import { getPostsMeta, getPostByName } from "@/lib/posts"
 import { notFound } from "next/navigation"
 import Link from "next/link"
 
-import 'highlight.js/styles/github-dark.css'
-import { Article, Header, HomeLink, Section, SectionHeader, SubTitle, Tags } from "@/styles/PostPageStyle"
+import styles from '@/styles/PostPage.module.css'
 
 export const revalidate = 10
 
@@ -53,16 +52,16 @@ export default async function Post({ params: { postId } }: Props) {
 
     return (
         <>
-            <HomeLink>
+            <p className={styles.homeLink}>
                 <Link href="/">← Back to Home</Link>
-            </HomeLink>
-            <Header>{meta.title}</Header>
-            <SubTitle>{meta.subtitle}</SubTitle>
-            <Article>{content}</Article>
-            <Section>
-                <SectionHeader>Related:</SectionHeader>
-                <Tags>{tags}</Tags>
-            </Section>
+            </p>
+            <h2 className={styles.header}>{meta.title}</h2>
+            <p className={styles.subTitle}>{meta.subtitle}</p>
+            <article className={styles.article}>{content}</article>
+            <section className={styles.section}>
+                <h3 className={styles.sectionHeader}>Related:</h3>
+                <div className={styles.tags}>{tags}</div>
+            </section>
         </>
     )
 }

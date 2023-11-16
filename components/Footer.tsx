@@ -1,19 +1,19 @@
-import { Address, Container, Inner, Outer } from "@/styles/FooterStyle";
+import styles from '@/styles/Footer.module.css'
 
 export default function Footer() {
     return (
-        <Outer>
-            <Container>
-                <Address>
+        <div className={styles.outer}>
+            <footer className={styles.container}>
+                <div className={styles.address}>
                     <p>Firma adresse</p>
                     <p>Firma adresse</p>
                     <p>Firma adresse</p>
-                </Address>
-                <Inner>
+                </div>
+                <div className={styles.inner}>
                     <p>Who are we?</p>
                     <p>Contact Us</p>
-                </Inner>
-            </Container>
-        </Outer>
+                </div>
+            </footer>
+        </div>
     )
 }

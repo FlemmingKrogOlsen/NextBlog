@@ -1,22 +1,27 @@
-import { CloseButton, Container, Header, Overlay } from "@/styles/ModalStyle";
+import styles from '@/styles/Modal.module.css'
 
 interface IProps extends ShowType {
-    children: React.ReactNode;
-    title: string;
-    onClose: () => void;
-  }
+  children: React.ReactNode;
+  title: string;
+  onClose: () => void;
+}
 
 const Modal = ({ children, title, show, onClose }: IProps) => {
   return (
     <>
-      <Container show={show} aria-modal="true" role="dialog" aria-hidden={show}>
-        <Header>
+      <div
+        className={`${styles.container} ${show ? styles.containerShow : styles.containerHide}`}
+        aria-modal="true"
+        role="dialog"
+        aria-hidden={show ? true : false}
+      >
+        <header className={styles.header}>
           <h2>{title}</h2>
-          <CloseButton onClick={onClose}>&times;</CloseButton>
-        </Header>
+          <button className={styles.closeButton} onClick={onClose}>&times;</button>
+        </header>
         {children}
-      </Container>
-      <Overlay show={show} onClick={onClose} />
+      </div>
+      <div className={`${styles.overlay} ${show ? styles.overlayShow : styles.overlayHide}`} onClick={onClose} />
     </>
   );
 };
