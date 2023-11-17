@@ -15,6 +15,8 @@ type Props = {
 export default function Gallery({ videoId, images }: Props) {
     const [show, setShow] = useState<boolean>(false);
     const [showImage, setShowImage] = useState<string>("")
+    const GITHUB_URL = "https://raw.githubusercontent.com/flemmingkrogolsen/blogposts/main/images"
+
     return (
         <div className={styles.container}>
             <div className={styles.imageContainer}>
@@ -23,7 +25,7 @@ export default function Gallery({ videoId, images }: Props) {
                         <Image
                             className={styles.image}
                             key={index}
-                            src={image ? `https://raw.githubusercontent.com/flemmingkrogolsen/blogposts/main/images/${image}` : "/images/default.jpg"}
+                            src={image ? `${GITHUB_URL}/${image}` : "/images/default.jpg"}
                             alt={"Photo from selected article"}
                             width={0}
                             height={0}
@@ -51,7 +53,7 @@ export default function Gallery({ videoId, images }: Props) {
                     >
                         <Image
                             className={styles.modalImage}
-                            src={`https://raw.githubusercontent.com/flemmingkrogolsen/blogposts/main/images/${showImage}`}
+                            src={`${GITHUB_URL}/${showImage}`}
                             alt="Image"
                             width={0}
                             height={0}
